@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Eligibility Calculator</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script defer src="/static/scripts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Loan Eligibility Calculator</h1>
+    </header>
+    <main>
+        <form id="eligibility-form">
+            <div class="form-group">
+                <label for="income">Monthly Income (₹):</label>
+                <input type="number" id="income" name="income" required>
+            </div>
+            <div class="form-group">
+                <label for="expenses">Monthly Expenses (₹):</label>
+                <input type="number" id="expenses" name="expenses" required>
+            </div>
+            <div class="form-group">
+                <label for="existing-emis">Existing EMIs (₹):</label>
+                <input type="number" id="existing-emis" name="existing-emis" required>
+            </div>
+            <div class="form-group">
+                <label for="rule">Eligibility Rule:</label>
+                <select id="rule" name="rule" required>
+                    <option value="conservative">Conservative</option>
+                    <option value="moderate">Moderate</option>
+                </select>
+            </div>
+            <button type="button" id="calculate-btn">Calculate Eligibility</button>
+        </form>
+
+        <div id="result-container" class="result">
+            <h2>Eligibility Results:</h2>
+            <p id="eligibility-result"></p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Loan Assistance App | <a href="/">Back to Home</a></p>
+    </footer>
+</body>
+</html>
