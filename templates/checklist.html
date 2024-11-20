@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Checklist</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script defer src="/static/checklist.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Document Checklist</h1>
+    </header>
+    <main>
+        <form id="checklist-form">
+            <h2>Select Loan Type</h2>
+            <div class="form-group">
+                <label for="loan-type">Loan Type:</label>
+                <select id="loan-type" name="loan_type" required>
+                    <option value="home">Home Loan</option>
+                    <option value="vehicle">Vehicle Loan</option>
+                    <option value="personal">Personal Loan</option>
+                    <option value="education">Education Loan</option>
+                </select>
+            </div>
+            <button type="button" id="generate-checklist">Generate Checklist</button>
+        </form>
+
+        <div id="checklist-container" class="checklist">
+            <h2>Checklist:</h2>
+            <ul id="checklist-items"></ul>
+        </div>
+
+        <div id="upload-section" class="upload">
+            <h3>Upload Your Documents:</h3>
+            <input type="file" id="file-upload" multiple>
+            <button type="button" id="upload-docs">Upload Documents</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Loan Assistance App | <a href="/">Back to Home</a></p>
+    </footer>
+</body>
+</html>
+
